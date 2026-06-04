@@ -7,6 +7,10 @@ function syncStandaloneBuildForFileProtocol() {
   return {
     name: 'sync-standalone-build-for-file-protocol',
     closeBundle() {
+      if (process.env.VERCEL) {
+        return;
+      }
+
       const buildDir = path.resolve(__dirname, 'dist');
 
       for (const entry of readdirSync(buildDir, { withFileTypes: true })) {
