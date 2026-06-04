@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.08), transparent 35%),
+    radial-gradient(circle at 90% 90%, rgba(219, 39, 119, 0.05), transparent 35%),
+    linear-gradient(180deg, #09090d 0%, #030304 100%);
+  background-attachment: fixed;
+  background-image: 
+    linear-gradient(rgba(37, 99, 235, 0.01) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.01) 1px, transparent 1px),
+    radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.08), transparent 35%),
+    radial-gradient(circle at 90% 90%, rgba(219, 39, 119, 0.05), transparent 35%),
+    linear-gradient(180deg, #09090d 0%, #030304 100%);
+  background-size: 30px 30px, 30px 30px, 100% 100%, 100% 100%, 100% 100%;
+  color: #f5f7ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Custom premium CNC scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(9, 9, 13, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(37, 99, 235, 0.25);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(219, 39, 119, 0.4);
+}
+
+.glass {
+  background: rgba(18, 18, 24, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
